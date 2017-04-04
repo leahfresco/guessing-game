@@ -28,7 +28,7 @@ while guess != random_num:
             print ("Your guess is too high, try again")
         elif guess < random_num:
             print ("Your guess is too low, try again")
-    else
+    else:
 #        congratulate player"""
         print("Well done, %s! You found my number in %i tries!" % (name, num_guesses))
 
