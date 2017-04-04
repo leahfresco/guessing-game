@@ -26,8 +26,8 @@ while guess != random_num:
             print ("Your guess is too high, try again")
         elif guess < random_num:
             print ("Your guess is too low, try again")
-#        increase number of guesses
-        num_guesses += 1
+#   increase number of guesses
+    num_guesses += 1
 #    else:
     else:
 #        congratulate player"""
