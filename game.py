@@ -31,5 +31,5 @@ while guess != random_num:
 #    else:
     else:
 #        congratulate player"""
-        print("Well done, %s! ")
+        print("Well done, %s! You found my number in %i tries!" % (name, num_guesses))
 
