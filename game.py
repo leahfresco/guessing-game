@@ -5,6 +5,7 @@
 print("Howdy, what's your name?")
 
 #get player name
+name = raw_input("Type in your name: ")
 #choose random number between 1 and 100
 #repeat forever:
 #    get guess
