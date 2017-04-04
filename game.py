@@ -18,13 +18,22 @@ guess = 0
 num_guesses = 0
 while guess != random_num:
 #    get guess
-    guess = int(raw_input("Your guess? "))
-# increase number of tries
+    # try-except statement to check for invalid things
+    try:
+        guess = float(raw_input("Your guess? "))
+    except ValueError:
+        print ("Hey dummy, type a number! Guess again.")
+        continue
+#    check if guess is int or float
+    if guess.is_integer() == False:
+        print ("Your guess is being rounded down to an integer.")
+    guess = int(guess)
+#    increase number of tries
     num_guesses += 1
-# Check for valid guess
+#    Check for valid guess
     if guess < 1 or guess > 100:
         print ("You git! Guess is out of range 1-100, guess again!")
-        num_guesses -= 1    
+        num_guesses -= 1   
 #    if guess is incorrect:
     elif guess > random_num:
         print ("Your guess is too high, try again")
