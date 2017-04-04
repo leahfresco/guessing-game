@@ -12,12 +12,11 @@ name = raw_input("Type in your name: ")
 random_num = random.randint(1,100)
 print("%s, I'm thinking of a number between 1 and 100" %name)
 print("Try to guess my number")
-print (random_num)
 
 #repeat forever:
 guess = 0
 num_guesses = 0
-while guess != random_num:    
+while guess != random_num:
 #    get guess
     guess = int(raw_input("Your guess? "))
 #    if guess is incorrect:
@@ -25,7 +24,6 @@ while guess != random_num:
 #        give hint
         if guess > random_num:
             print ("Your guess is too high, try again")
-            print (guess)
         elif guess < random_num:
             print ("Your guess is too low, try again")
 #        increase number of guesses
