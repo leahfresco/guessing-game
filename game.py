@@ -20,8 +20,7 @@ while guess != random_num:
 #    get guess
     guess = int(raw_input("Your guess? "))
 # increase number of tries
-    num_guesses += 1
-    
+    num_guesses += 1  
 #    if guess is incorrect:
     if guess != random_num:
 #        give hint
@@ -29,8 +28,7 @@ while guess != random_num:
             print ("Your guess is too high, try again")
         elif guess < random_num:
             print ("Your guess is too low, try again")
-#    else:
-    else:
+    else
 #        congratulate player"""
         print("Well done, %s! You found my number in %i tries!" % (name, num_guesses))
 
