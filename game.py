@@ -4,13 +4,15 @@ import random
 
 # Put your code here
 # greet player
-print("Howdy, what's your name?")
+print("Howdy, what's your name? Let's play a number guessing game!")
 
 #get player name
 name = raw_input("Type in your name: ")
 #choose random number between 1 and 100
-random_num = random.randint(1, 100)
-print("%s, I'm thinking of a number between 1 and 100" % name)
+high_num = int(raw_input("Give me the highest number: "))
+low_num = int(raw_input("Give me the lowest number: "))
+random_num = random.randint(low_num, high_num)
+print("%s, I'm thinking of a number between %d and %d" % (name, low_num, high_num))
 print("Try to guess my number")
 
 #repeat forever:
@@ -36,7 +38,7 @@ while guess != random_num:
     num_guesses += 1
 
 #    Check for valid guess
-    if guess < 1 or guess > 100:
+    if guess < low_num or guess > high_num:
         print ("You git! Guess is out of range 1-100, guess again!")
         num_guesses -= 1
 #    if guess is incorrect:
@@ -48,8 +50,8 @@ while guess != random_num:
         if play_again.lower() == 'y':
             guess = 0
             num_guesses = 0
-            random_num = random.randint(1, 100)
-            print("\n\nNEW GAME! I'm thinking of a new number between 1 and 100")
+            random_num = random.randint(low_num, high_num)
+            print("\n\nNEW GAME! I'm thinking of a new number between %d and %d" %(low_num, high_num))
             print("Try to guess my number")
         else:
             break
@@ -71,6 +73,6 @@ while guess != random_num:
         if play_again.lower() == 'y':
             guess = 0
             num_guesses = 0
-            random_num = random.randint(1, 100)
-            print("\n\nNEW GAME! I'm thinking of a new number between 1 and 100")
+            random_num = random.randint(low_num, high_num)
+            print("\n\nNEW GAME! I'm thinking of a new number between %d and %d" %(low_num, high_num))
             print("Try to guess my number")
